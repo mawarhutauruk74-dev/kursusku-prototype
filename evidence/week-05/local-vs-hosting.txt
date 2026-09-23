@@ -1,0 +1,71 @@
+PERBANDINGAN LOCAL VS HOSTING
+PERTEMUAN 5 - KURSUSKU
+
+1. URL
+
+Local:
+http://localhost/kursusku-prototype/
+
+Hosting:
+Website diakses menggunakan domain atau subdomain melalui internet.
+
+
+2. LOKASI
+
+Local:
+Project berada dan dijalankan di komputer sendiri.
+
+Hosting:
+Project berada pada server hosting yang dapat diakses melalui internet.
+
+
+3. DATABASE
+
+Local:
+Database dapat menggunakan database yang berjalan di komputer lokal.
+
+Hosting:
+Database berada pada server/database yang disediakan oleh hosting.
+
+
+4. ENVIRONMENT
+
+Local:
+Digunakan untuk proses pengembangan dan pengujian aplikasi.
+
+Hosting:
+Digunakan untuk menjalankan aplikasi yang dapat diakses oleh pengguna melalui internet.
+
+
+5. HTTPS / SSL
+
+Local:
+Digunakan terutama untuk kebutuhan pengembangan lokal.
+
+Hosting:
+HTTPS/SSL digunakan untuk membantu mengamankan komunikasi antara browser dan server.
+
+
+6. DEBUG
+
+Local:
+Debugging lebih mudah dilakukan karena aplikasi sedang dikembangkan dan diuji secara langsung.
+
+Hosting:
+Debug harus lebih hati-hati agar informasi error atau konfigurasi internal tidak ditampilkan kepada pengguna.
+
+
+7. SECRET
+
+Local:
+Secret seperti password database dan API key digunakan untuk kebutuhan konfigurasi lokal dan tidak boleh dibagikan.
+
+Hosting:
+Secret harus disimpan dengan aman dan tidak boleh ditampilkan di source code atau kepada pengguna.
+
+
+KESIMPULAN
+
+Local digunakan terutama untuk mengembangkan dan menguji aplikasi sebelum dipublikasikan.
+
+Hosting digunakan agar aplikasi dapat diakses melalui internet oleh pengguna.

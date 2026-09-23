@@ -107,6 +107,8 @@ $courses = [
 
             <a href="#kontak">Kontak</a>
 
+            <a href="registration.php">Daftar Kursus</a>
+
         </div>
 
     </nav>
