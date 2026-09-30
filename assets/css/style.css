@@ -15,6 +15,10 @@ body {
   margin: auto;
 }
 
+/* =========================
+   HEADER
+   ========================= */
+
 .header {
   background: #2563eb;
   color: white;
@@ -30,6 +34,10 @@ body {
   margin: 8px 0 0;
 }
 
+/* =========================
+   NAVBAR
+   ========================= */
+
 .navbar {
   background: #1e40af;
   padding: 15px 0;
@@ -38,6 +46,7 @@ body {
 .navbar .container {
   display: flex;
   gap: 25px;
+  align-items: center;
 }
 
 .navbar a {
@@ -45,6 +54,14 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
   background: white;
@@ -86,6 +103,10 @@ body {
   margin-top: 10px;
 }
 
+/* =========================
+   SECTION
+   ========================= */
+
 .section {
   padding: 60px 0;
 }
@@ -97,6 +118,10 @@ body {
 .section h2 {
   margin-top: 0;
 }
+
+/* =========================
+   COURSE CARD
+   ========================= */
 
 .course-grid {
   display: grid;
@@ -116,10 +141,18 @@ body {
   color: #2563eb;
 }
 
+/* =========================
+   VIDEO
+   ========================= */
+
 .video-placeholder {
   margin-top: 25px;
   text-align: center;
 }
+
+/* =========================
+   FOOTER
+   ========================= */
 
 .footer {
   background: #1e293b;
@@ -128,23 +161,10 @@ body {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-  }
+/* =========================
+   COURSE TABLE
+   ========================= */
 
-  .course-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h2 {
-    font-size: 30px;
-  }
-
-  .navbar .container {
-    flex-wrap: wrap;
-  }
-}
 .course-table {
   width: 100%;
   overflow-x: auto;
@@ -182,82 +202,120 @@ body {
   border-bottom: none;
 }
 
-@media (max-width: 900px) {
-  .course-table {
-    overflow-x: auto;
-  }
-
-  .course-table table {
-    min-width: 850px;
-  }
-}
-
 /* =========================
    FORM REGISTRATION
    ========================= */
 
 .registration-form {
-  background: white;
+  max-width: 850px;
+  margin: 30px auto 0;
   padding: 30px;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  margin-top: 30px;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-.form-group label,
-.form-group legend {
+/* Label biasa */
+.form-group > label {
   display: block;
-  font-weight: 600;
   margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2937;
 }
 
-.form-group input,
+/* Input teks, email, nomor HP, select, textarea */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
 .form-group select,
 .form-group textarea {
+  display: block;
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
-  font-size: 14px;
-  box-sizing: border-box;
+  background: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+/* Saat input diklik */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .form-group textarea {
+  min-height: 120px;
   resize: vertical;
 }
 
-.choice {
-  display: block;
-  margin-bottom: 10px;
+/* =========================
+   RADIO & CHECKBOX
+   ========================= */
+
+fieldset.form-group {
+  padding: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
 }
 
-.choice input {
-  margin-right: 8px;
+fieldset.form-group legend {
+  padding: 0 8px;
+  font-weight: 600;
+  color: #1f2937;
 }
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+  margin-bottom: 8px;
+  font-weight: normal;
+  width: auto;
+}
+
+.choice input[type="radio"],
+.choice input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* =========================
+   HELP TEXT
+   ========================= */
 
 .help {
-  font-size: 13px;
-  color: #6b7280;
   margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
 }
+
+/* =========================
+   BUTTON
+   ========================= */
 
 .btn-primary {
   display: inline-block;
+  padding: 12px 24px;
   border: none;
-  padding: 12px 20px;
   border-radius: 8px;
   background: #2563eb;
   color: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -266,42 +324,104 @@ body {
   opacity: 0.9;
 }
 
+/* =========================
+   LINK BUTTON
+   ========================= */
+
 .btn-link {
   display: inline-block;
   margin-top: 20px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
+/* =========================
+   SUCCESS ALERT
+   ========================= */
+
 .alert-success {
+  max-width: 850px;
+  margin: 30px auto 20px;
   padding: 20px;
   background: #ecfdf5;
   border: 1px solid #a7f3d0;
   border-radius: 12px;
-  margin-bottom: 20px;
 }
 
+/* =========================
+   SUMMARY
+   ========================= */
+
 .summary-card {
-  background: white;
+  max-width: 850px;
+  margin: 0 auto;
   padding: 30px;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .summary-list p {
   padding: 10px 0;
+  margin: 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
-@media (max-width: 640px) {
+/* =========================
+   RESPONSIVE TABLE
+   ========================= */
 
-  .form-grid {
+@media (max-width: 900px) {
+
+  .course-table {
+    overflow-x: auto;
+  }
+
+  .course-table table {
+    min-width: 850px;
+  }
+
+}
+
+/* =========================
+   RESPONSIVE TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .hero-content {
     grid-template-columns: 1fr;
   }
 
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .navbar .container {
+    flex-wrap: wrap;
+  }
+
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+   ========================= */
+
+@media (max-width: 640px) {
+
   .registration-form,
-  .summary-card {
+  .summary-card,
+  .alert-success {
     padding: 20px;
+  }
+
+  .choice {
+    display: flex;
+    margin-right: 0;
   }
 
   .btn-primary {

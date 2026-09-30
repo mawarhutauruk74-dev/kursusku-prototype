@@ -1,0 +1,14 @@
+Pertemuan 6 - Test Matrix
+
+01 Mahasiswa + PHP Dasar => Rp 225.000 : PASS
+02 Guru + PHP Dasar => Rp 212.500 : PASS
+03 Umum + PHP Dasar => Rp 237.500 : PASS
+04 Pilih 3 minat => UI/UX, Database, Backend : PASS
+05 Tidak memilih minat => proses tetap berhasil : PASS
+06 Nama kosong => nama wajib diisi : PASS
+07 Email tidak valid => email wajib valid : PASS
+08 Pilih kursus => pilihan berasal dari array + foreach : PASS
+09 Mahasiswa => diskon 10% : PASS
+10 Guru => diskon 15% : PASS
+11 Umum => diskon 5% : PASS
+12 History dummy => data dirender dengan foreach : PASS

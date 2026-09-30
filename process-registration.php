@@ -19,8 +19,37 @@ $note = trim($_POST['note'] ?? '');
 $source = $_POST['source'] ?? '';
 
 
-$interestText = implode(', ', $interests);
+$coursePrices = [
 
+    'web-dasar' => 200000,
+
+    'php-dasar' => 250000,
+
+    'laravel-fundamental' => 350000,
+
+];
+
+$price = $coursePrices[$course] ?? 0;
+
+
+$discountRates = [
+
+    'mahasiswa' => 0.10,
+
+    'guru' => 0.15,
+
+    'umum' => 0.05,
+
+];
+
+$discountRate = $discountRates[$participantType] ?? 0;
+
+$discount = $price * $discountRate;
+
+$total = $price - $discount;
+
+
+$interestText = implode(', ', $interests);
 
 function e($value): string
 {
@@ -121,12 +150,26 @@ function e($value): string
                         <?php echo e($studyProgram); ?>
                     </p>
 
-
                     <p>
                         <strong>Kursus:</strong>
                         <?php echo e($course); ?>
                     </p>
 
+                    <p>
+                        <strong>Harga Kursus:</strong>
+                        Rp <?php echo number_format($price, 0, ',', '.'); ?>
+                    </p>
+
+                    <p>
+                        <strong>Diskon:</strong>
+                        <?php echo ($discountRate * 100); ?>%
+                        (Rp <?php echo number_format($discount, 0, ',', '.'); ?>)
+                    </p>
+
+                    <p>
+                        <strong>Total Biaya:</strong>
+                        Rp <?php echo number_format($total, 0, ',', '.'); ?>
+                    </p>
 
                     <p>
                         <strong>Jenis Peserta:</strong>

@@ -142,36 +142,29 @@
                 <!-- Pilihan Kursus -->
                 <div class="form-group">
 
-                    <label for="course">
-                        Pilih Kursus
-                    </label>
+    <label for="course">
+        Pilih Kursus
+    </label>
 
-                    <select
-                        id="course"
-                        name="course"
-                        required
-                    >
+    <?php
+    $courses = [
+        'web-dasar' => 'Web Dasar',
+        'php-dasar' => 'PHP Dasar',
+        'laravel-fundamental' => 'Laravel Fundamental',
+    ];
+    ?>
 
-                        <option value="">
-                            -- Pilih Kursus --
-                        </option>
+    <select id="course" name="course" required>
+        <option value="">-- Pilih Kursus --</option>
 
-                        <option value="web-dasar">
-                            Web Dasar
-                        </option>
+        <?php foreach ($courses as $value => $label): ?>
+            <option value="<?= htmlspecialchars($value) ?>">
+                <?= htmlspecialchars($label) ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
 
-                        <option value="php-dasar">
-                            PHP Dasar
-                        </option>
-
-                        <option value="laravel-fundamental">
-                            Laravel Fundamental
-                        </option>
-
-                    </select>
-
-                </div>
-
+</div>
 
                 <!-- Jenis Peserta -->
                 <fieldset class="form-group">
@@ -189,6 +182,15 @@
                         >
                         Mahasiswa
                     </label>
+
+                    <label class="choice"> 
+                        <input 
+                             type="radio" 
+                             name="participant_type" 
+                             value="guru" 
+                        > 
+                        Guru 
+            </label>
 
                     <label class="choice">
                         <input
